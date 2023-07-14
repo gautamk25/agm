@@ -1,0 +1,20 @@
+
+<agm-map  [latitude]='lat' [longitude]='long' >
+    <agm-marker [latitude]="lat" [longitude]="long"></agm-marker>
+    
+    <!-- <agm-marker   [latitude]="lat1" [longitude]="long2"></agm-marker> -->
+    
+  <!-- <agm-circle [latitude]="lat1" [longitude]="long2"
+  [circleDraggable]="true"
+  [radius]="5000"
+  [fillColor]="'red'">
+  [editable]="true">
+</agm-circle> -->
+</agm-map>
+<div class="container">
+  <input ngx-google-places-autocomplete [options]="options" (onAddressChange)="handleAddressChange($event)" />
+
+  <p>Address: {{ userAddress }}</p>
+  <p>Latitude: {{ userLatitude }}</p>
+  <p>Longitude: {{ userLongitude }}</p>
+</div>
